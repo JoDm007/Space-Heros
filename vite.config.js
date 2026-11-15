@@ -2,8 +2,7 @@ import { defineConfig } from 'vitest/config';
 
 // GitHub Pages sert le dépôt à https://jodm007.github.io/Space-Heros/
 // Le base path doit correspondre au nom du dépôt GitHub
-// Le workflow pose BASE_PATH pour definir le chemin de base
-const base = process.env.BASE_PATH || '/';
+const base = process.env.NODE_ENV === 'production' ? '/Space-Heros/' : '/';
 
 export default defineConfig({
   base,
