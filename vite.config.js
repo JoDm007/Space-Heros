@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitest/config';
 
-// GitHub Pages sert le dépôt à la racine (https://jodm007.github.io/SpaceHeroes2/).
-// Une base relative vide ou '/' fonctionne correctement.
-// Le workflow pose PAGES=1 pour activer le mode déploiement.
-const base = process.env.PAGES === '1' ? '/' : '/';
+// GitHub Pages sert le dépôt à https://jodm007.github.io/Space-Heros/
+// Le base path doit correspondre au nom du dépôt GitHub
+// Le workflow pose BASE_PATH pour definir le chemin de base
+const base = process.env.BASE_PATH || '/';
 
 export default defineConfig({
   base,
